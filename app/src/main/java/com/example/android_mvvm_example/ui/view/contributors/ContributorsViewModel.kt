@@ -1,5 +1,7 @@
 package com.example.android_mvvm_example.ui.view.contributors
 
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import com.example.android_mvvm_example.base.BaseViewModel
 import com.example.android_mvvm_example.retrofit.domain.Contributor
 import com.example.android_mvvm_example.retrofit.network.GitHubApi
@@ -12,7 +14,7 @@ class ContributorsViewModel : BaseViewModel() {
 
     private val gitHubApi: GitHubApi by inject { parametersOf(this) }
 
-    private val contributorList = mutableListOf<List<Contributor>>()
+    val contributorList = MutableLiveData<List<Contributor>>()
 
     fun getContributors() {
         addDisposable(
@@ -20,8 +22,8 @@ class ContributorsViewModel : BaseViewModel() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    contributorList.add(it)
-                }, {})
+                    contributorList.postValue(it)
+                }, { Log.e("error", it.message.toString())} )
         )
     }
 }

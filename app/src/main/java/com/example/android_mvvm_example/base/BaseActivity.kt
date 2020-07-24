@@ -20,7 +20,7 @@ abstract class BaseActivity <B : ViewDataBinding, VM : BaseViewModel>(
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, layoutResId)
-        binding.setVariable(BR.main, viewModel)
+        binding.setVariable(BR.vm, viewModel)
     }
 
     fun showToast(message: String) = Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()

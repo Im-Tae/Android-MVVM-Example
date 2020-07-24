@@ -1,7 +1,6 @@
 package com.example.android_mvvm_example.di.modules
 
 import com.example.android_mvvm_example.di.app.MyApplication
-import com.example.android_mvvm_example.retrofit.network.GitHubApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module

@@ -27,7 +27,7 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-            setVariable(BR.contributors, viewModel)
+            setVariable(BR.vm, viewModel)
         }
     }
 }
