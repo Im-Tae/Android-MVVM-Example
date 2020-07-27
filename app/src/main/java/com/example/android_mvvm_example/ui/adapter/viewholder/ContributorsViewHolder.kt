@@ -2,7 +2,7 @@ package com.example.android_mvvm_example.ui.adapter.viewholder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_mvvm_example.retrofit.domain.Contributor
+import com.example.android_mvvm_example.model.domain.Contributor
 import kotlinx.android.synthetic.main.item_contributors.view.*
 
 class ContributorsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

@@ -1,4 +1,4 @@
-package com.example.android_mvvm_example.retrofit.domain
+package com.example.android_mvvm_example.model.domain
 
 data class Contributor(
     val login : String? = null,

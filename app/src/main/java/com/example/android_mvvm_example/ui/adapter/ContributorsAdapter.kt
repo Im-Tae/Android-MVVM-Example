@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_mvvm_example.R
-import com.example.android_mvvm_example.retrofit.domain.Contributor
+import com.example.android_mvvm_example.model.domain.Contributor
 import com.example.android_mvvm_example.ui.adapter.viewholder.ContributorsViewHolder
 
 class ContributorsAdapter(private val contributorsList: List<Contributor>) : RecyclerView.Adapter<ContributorsViewHolder>() {

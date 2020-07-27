@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 val fragmentModule = module {
     viewModel {
-        ContributorsViewModel()
+        ContributorsViewModel(get())
     }
 }
