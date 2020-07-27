@@ -2,11 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
-        <variable
-            name="vm"
-            type="com.example.android_mvvm_example.ui.view.contributors.ContributorsViewModel" />
-    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_contributors"/>
+            tools:listitem="@layout/item_contributors" />
 
     </LinearLayout>
 

@@ -28,6 +28,7 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
             setVariable(BR.vm, viewModel)
+            lifecycleOwner = viewLifecycleOwner
         }
     }
 }
