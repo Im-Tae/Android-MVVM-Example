@@ -3,7 +3,7 @@
     <data>
         <variable
             name="contributor"
-            type="com.example.android_mvvm_example.model.domain.Contributor" />
+            type="com.leaf.android_mvvm_example.model.domain.Contributor" />
     </data>
 
     <LinearLayout

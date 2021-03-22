@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android_mvvm_example">
+    package="com.leaf.android_mvvm_example">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:name=".di.app.MyApplication"
+        android:name="com.leaf.android_mvvm_example.di.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.view.main.MainActivity">
+        <activity android:name="com.leaf.android_mvvm_example.ui.view.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

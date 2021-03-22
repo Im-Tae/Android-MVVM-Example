@@ -7,7 +7,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.android_mvvm_example.ui.view.main.MainViewModel" />
+            type="com.leaf.android_mvvm_example.ui.view.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

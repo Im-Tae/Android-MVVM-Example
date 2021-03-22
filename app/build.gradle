@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.example.android_mvvm_example"
+        applicationId "com.leaf.android_mvvm_example"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
