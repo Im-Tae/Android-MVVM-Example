@@ -8,7 +8,7 @@ import org.koin.core.context.startKoin
 class MyApplication : Application() {
 
     companion object {
-        const val BASE_URL = "https://api.github.com/"
+        const val BASE_URL = "http://api.github.com/"
     }
 
     override fun onCreate() {

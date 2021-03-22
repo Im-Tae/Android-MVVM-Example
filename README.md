@@ -86,6 +86,24 @@ ACC에서 더 다양한 것들을 제공하기 때문에 한번쯤 확인하면 
 
 
 
+**주의 사항**
+
+LiveData 사용시 데이터 변경을 위해 viewModel에서 선언한 MutableLiveData를 public으로 설정하면 안된다.
+
+public으로 설정시 Activity나 fragment에서 접근해 값을 변경하게 되면 MVVM Architecture에 위반되기 때문이다.
+
+따라서 getter나 backing properties를 사용해 **캡슐화**를 해야한다.
+
+```kotlin
+private val _contributorList = MutableLiveData<List<Contributor>>()
+
+val contributorList : LiveData<List<Contributor>>
+    get() = _contributorList
+  
+```
+
+
+
 ## Repository
 
 - 뷰모델과 상호작용하기 위한 데이터 API를 들고 있는 클래스입니다.
@@ -101,3 +119,4 @@ ACC에서 더 다양한 것들을 제공하기 때문에 한번쯤 확인하면 
 
 
 전체적인 구조는 코드로 확인 바랍니다.
+
