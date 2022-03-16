@@ -3,6 +3,7 @@ package com.leaf.android_mvvm_example.data.repository
 import com.leaf.android_mvvm_example.data.domain.Contributor
 import com.leaf.android_mvvm_example.data.local.dao.ContributorDao
 import com.leaf.android_mvvm_example.data.remote.GitHubApi
+import io.reactivex.Flowable
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -22,13 +23,20 @@ class ContributorRepository(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSuccess {
-                CoroutineScope(Dispatchers.IO).launch {
-                    insertContributors(*it.toTypedArray())
-                }
+
+                contributorDao.deleteAll()
+                    .subscribeOn(Schedulers.io())
+                    .subscribe()
+
+                contributorDao
+                    .insertContributors(*it.toTypedArray())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe()
             }
     }
 
-    fun getContributors() = contributorDao.getContributors()
-
-    private suspend fun insertContributors(vararg name: Contributor) = contributorDao.insertContributors(*name)
+    fun getContributors(): Flowable<List<Contributor>> =
+        contributorDao.getContributors()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
 }

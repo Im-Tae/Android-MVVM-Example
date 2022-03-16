@@ -27,7 +27,7 @@ class MainViewModel(
     init {
         viewModelScope.launch {
 
-            contributorRepository.getContributors().collect { contributors ->
+            contributorRepository.getContributors().subscribe { contributors ->
 
                 if (!contributors.isNullOrEmpty())
                     _name.postValue(

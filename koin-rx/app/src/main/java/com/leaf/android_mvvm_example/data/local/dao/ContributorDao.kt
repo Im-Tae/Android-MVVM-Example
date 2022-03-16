@@ -2,17 +2,21 @@ package com.leaf.android_mvvm_example.data.local.dao
 
 import androidx.room.*
 import com.leaf.android_mvvm_example.data.domain.Contributor
-import kotlinx.coroutines.flow.Flow
+import io.reactivex.Completable
+import io.reactivex.Flowable
 
 @Dao
 interface ContributorDao {
 
     @Query("SELECT * FROM contributor")
-    fun getContributors(): Flow<List<Contributor>>
+    fun getContributors(): Flowable<List<Contributor>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertContributors(vararg name: Contributor)
+    fun insertContributors(vararg name: Contributor): Completable
 
     @Update
-    suspend fun updateContributor(name: Contributor)
+    fun updateContributor(name: Contributor): Completable
+
+    @Query("DELETE FROM contributor")
+    fun deleteAll(): Completable
 }

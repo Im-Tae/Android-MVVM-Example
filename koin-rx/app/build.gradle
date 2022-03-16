@@ -63,6 +63,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
 
     // RxLifecycle
     implementation "com.trello.rxlifecycle3:rxlifecycle:$lifecycle_version"
@@ -87,8 +88,4 @@ dependencies {
     // koin
     implementation "io.insert-koin:koin-core:3.1.5"
     implementation "io.insert-koin:koin-android:3.1.5"
-
-    // coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 }
