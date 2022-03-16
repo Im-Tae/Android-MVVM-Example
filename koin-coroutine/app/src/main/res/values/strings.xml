@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVVM-Koin-Coroutine-Example</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
