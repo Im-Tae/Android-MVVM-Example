@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.trello.rxlifecycle3:rxlifecycle-components:3.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dbb42149edc768b7194753ae48774f29/transformed/jetified-rxlifecycle-components-3.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dbb42149edc768b7194753ae48774f29/transformed/jetified-rxlifecycle-components-3.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dbb42149edc768b7194753ae48774f29/transformed/jetified-rxlifecycle-components-3.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello.rxlifecycle3/rxlifecycle-components/3.1.0/4c5a07428c3d42a4814f385b1e8141cc580163fd/rxlifecycle-components-3.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello.rxlifecycle3/rxlifecycle-components/3.1.0/17de6dd629826e22ec93626c41cd5ea6c7874bb6/rxlifecycle-components-3.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
