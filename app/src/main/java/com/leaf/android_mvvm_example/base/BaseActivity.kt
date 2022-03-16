@@ -22,7 +22,17 @@ abstract class BaseActivity <B : ViewDataBinding, VM : BaseViewModel>(
         binding = DataBindingUtil.setContentView(this, layoutResId)
         binding.setVariable(BR.vm, viewModel)
         binding.lifecycleOwner = this
+
+        init()
+        initLiveData()
+        initListener()
     }
+
+    open fun init() {}
+
+    open fun initLiveData() {}
+
+    open fun initListener() {}
 
     fun showToast(message: String) = Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
 }

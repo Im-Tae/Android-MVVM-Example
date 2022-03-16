@@ -1,6 +1,6 @@
-package com.leaf.android_mvvm_example.model.network
+package com.leaf.android_mvvm_example.data.remote
 
-import com.leaf.android_mvvm_example.model.domain.Contributor
+import com.leaf.android_mvvm_example.data.domain.Contributor
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

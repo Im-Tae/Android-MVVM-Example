@@ -15,7 +15,7 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
     @LayoutRes private val layoutResId: Int
 ) : Fragment(){
 
-    private lateinit var binding: B
+    lateinit var binding: B
 
     abstract val viewModel: VM
 
@@ -30,5 +30,15 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
             setVariable(BR.vm, viewModel)
             lifecycleOwner = viewLifecycleOwner
         }
+
+        init()
+        initLiveData()
+        initListener()
     }
+
+    open fun init() {}
+
+    open fun initLiveData() {}
+
+    open fun initListener() {}
 }

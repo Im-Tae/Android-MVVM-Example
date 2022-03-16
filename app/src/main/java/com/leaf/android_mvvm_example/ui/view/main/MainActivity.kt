@@ -1,7 +1,6 @@
 package com.leaf.android_mvvm_example.ui.view.main
 
-import android.os.Bundle
-import androidx.lifecycle.Observer
+import android.text.method.ScrollingMovementMethod
 import com.leaf.android_mvvm_example.R
 import com.leaf.android_mvvm_example.base.BaseActivity
 import com.leaf.android_mvvm_example.databinding.ActivityMainBinding
@@ -14,19 +13,23 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
 
     override val viewModel: MainViewModel by viewModel()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun initLiveData() {
 
-        viewModel.onClickButton.observe(this, Observer {
+        viewModel.onClickButton.observe(this) {
             showToast("Fragment 열림").let {
                 supportFragmentManager
                     .beginTransaction()
-                    .add(android.R.id.content,
-                        ContributorsFragment()
-                    )
+                    .add(android.R.id.content, ContributorsFragment())
                     .addToBackStack(null)
                     .commit()
             }
-        })
+        }
+
+        viewModel.name.observe(this) {
+            binding.apply {
+                textView.movementMethod = ScrollingMovementMethod()
+                textView.text = it
+            }
+        }
     }
 }

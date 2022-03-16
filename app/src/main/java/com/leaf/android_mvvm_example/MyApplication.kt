@@ -1,9 +1,10 @@
-package com.leaf.android_mvvm_example.di.app
+package com.leaf.android_mvvm_example
 
 import android.app.Application
-import com.leaf.android_mvvm_example.di.modules.*
+import com.leaf.android_mvvm_example.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
+import timber.log.Timber
 
 class MyApplication : Application() {
 
@@ -20,8 +21,11 @@ class MyApplication : Application() {
                 activityModule,
                 fragmentModule,
                 networkModule,
-                apiModule
+                apiModule,
+                databaseModule
             )
         }
+
+        Timber.plant(Timber.DebugTree())
     }
 }

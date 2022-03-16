@@ -3,12 +3,11 @@
     <data>
         <variable
             name="contributor"
-            type="com.leaf.android_mvvm_example.model.domain.Contributor" />
+            type="com.leaf.android_mvvm_example.data.domain.Contributor" />
     </data>
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5sp"
@@ -22,14 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TextAppearance.AppCompat.Large"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="login"/>
-
-        <TextView
-            android:id="@+id/user_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextAppearance.AppCompat"
-            android:text="user_id"/>
 
     </LinearLayout>
 

@@ -1,13 +1,10 @@
 package com.leaf.android_mvvm_example.ui.view.contributors
 
-import android.os.Bundle
-import android.view.View
-import androidx.lifecycle.Observer
+import androidx.core.view.isVisible
 import com.leaf.android_mvvm_example.R
 import com.leaf.android_mvvm_example.base.BaseFragment
 import com.leaf.android_mvvm_example.databinding.FragmentContributorsBinding
-import com.leaf.android_mvvm_example.ui.adapter.ContributorsAdapter
-import kotlinx.android.synthetic.main.fragment_contributors.*
+import com.leaf.android_mvvm_example.ui.adapter.ContributorAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ContributorsFragment : BaseFragment<FragmentContributorsBinding, ContributorsViewModel>(
@@ -16,19 +13,33 @@ class ContributorsFragment : BaseFragment<FragmentContributorsBinding, Contribut
 
     override val viewModel: ContributorsViewModel by viewModel()
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initLiveData() {
 
-        init()
+        viewModel.contributorList.observe(viewLifecycleOwner) {
+            binding.recyclerView.apply {
+                adapter = ContributorAdapter()
+                (adapter as ContributorAdapter).submitList(it)
+                scheduleLayoutAnimation()
+            }
+        }
 
-        viewModel.contributorList.observe(viewLifecycleOwner, Observer {
-            recyclerView.adapter?.notifyDataSetChanged()
-            recyclerView.adapter = ContributorsAdapter(it)
-        })
+        viewModel.showProgress.observe(viewLifecycleOwner) {
+
+            binding.progress.isVisible = it
+        }
     }
 
-    private fun init() {
-        viewModel.getContributors()
-    }
+    override fun initListener() {
 
+        binding.apply {
+
+            button.setOnClickListener {
+
+                val owner = ownerEditText.text.toString()
+                val repo = repoEditText.text.toString()
+
+                viewModel.getContributors(owner, repo)
+            }
+        }
+    }
 }

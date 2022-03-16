@@ -1,6 +1,6 @@
-package com.leaf.android_mvvm_example.di.modules
+package com.leaf.android_mvvm_example.di
 
-import com.leaf.android_mvvm_example.di.app.MyApplication
+import com.leaf.android_mvvm_example.MyApplication
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module

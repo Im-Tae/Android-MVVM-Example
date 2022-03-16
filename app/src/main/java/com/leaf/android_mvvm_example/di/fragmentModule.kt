@@ -1,4 +1,4 @@
-package com.leaf.android_mvvm_example.di.modules
+package com.leaf.android_mvvm_example.di
 
 import com.leaf.android_mvvm_example.ui.view.contributors.ContributorsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
