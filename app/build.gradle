@@ -64,9 +64,6 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
 
-    // RxJava
-    implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
-
     // RxLifecycle
     implementation "com.trello.rxlifecycle3:rxlifecycle:$lifecycle_version"
     implementation "com.trello.rxlifecycle3:rxlifecycle-android:$lifecycle_version"
@@ -78,17 +75,20 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 
     // OkHttp
-    implementation("com.squareup.okhttp3:okhttp:4.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    implementation("com.squareup.okhttp3:okhttp:$okhttp_version")
+    implementation("com.squareup.okhttp3:logging-interceptor:$okhttp_version")
+
+    // timber
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    // RxJava
+    implementation "io.reactivex.rxjava3:rxjava:3.0.4"
 
     // koin
-    implementation "io.insert-koin:koin-core:$koin_version"
-    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-core:3.1.5"
+    implementation "io.insert-koin:koin-android:3.1.5"
 
     // coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
-
-    // timber
-    implementation "com.jakewharton.timber:timber:$timber_version"
 }

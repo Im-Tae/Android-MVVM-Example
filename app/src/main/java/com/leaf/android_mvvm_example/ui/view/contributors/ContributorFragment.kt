@@ -3,15 +3,15 @@ package com.leaf.android_mvvm_example.ui.view.contributors
 import androidx.core.view.isVisible
 import com.leaf.android_mvvm_example.R
 import com.leaf.android_mvvm_example.base.BaseFragment
-import com.leaf.android_mvvm_example.databinding.FragmentContributorsBinding
+import com.leaf.android_mvvm_example.databinding.FragmentContributorBinding
 import com.leaf.android_mvvm_example.ui.adapter.ContributorAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ContributorsFragment : BaseFragment<FragmentContributorsBinding, ContributorsViewModel>(
-    R.layout.fragment_contributors
+class ContributorFragment : BaseFragment<FragmentContributorBinding, ContributorViewModel>(
+    R.layout.fragment_contributor
 ) {
 
-    override val viewModel: ContributorsViewModel by viewModel()
+    override val viewModel: ContributorViewModel by viewModel()
 
     override fun initLiveData() {
 

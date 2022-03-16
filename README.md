@@ -1,10 +1,6 @@
 ## Android-MVVM
 
-안드로이드 MVVM 모델을 공부하면서 정리한 README 입니다.
-
-
-
-## MVVM Model ??
+## MVVM Model
 
 
 
@@ -67,7 +63,7 @@ Activity/Fragment는 ViewModel을, ViewModel에는 LiveData를 가지고 있으�
 
 
 
-ACC에서 더 다양한 것들을 제공하기 때문에 한번쯤 확인하면 좋을 것 같습니다.
+ACC에서 더 다양한 것들을 제공하기 때문에 한번 확인하면 좋을 것 같습니다.
 
 
 
@@ -88,11 +84,11 @@ ACC에서 더 다양한 것들을 제공하기 때문에 한번쯤 확인하면 
 
 **주의 사항**
 
-LiveData 사용시 데이터 변경을 위해 viewModel에서 선언한 MutableLiveData를 public으로 설정하면 안된다.
+LiveData 사용시 데이터 변경을 위해 viewModel에서 선언한 MutableLiveData를 public으로 설정하면 안됩니다.
 
-public으로 설정시 Activity나 fragment에서 접근해 값을 변경하게 되면 MVVM Architecture에 위반되기 때문이다.
+public으로 설정시 Activity나 fragment에서 접근해 값을 변경하게 되면 MVVM Architecture에 위반되기 때문입니다.
 
-따라서 getter나 backing properties를 사용해 **캡슐화**를 해야한다.
+따라서 getter나 backing properties를 사용해 **캡슐화**를 해야랍니다.
 
 ```kotlin
 private val _contributorList = MutableLiveData<List<Contributor>>()
@@ -114,7 +110,7 @@ val contributorList : LiveData<List<Contributor>>
 
 ## Room
 
-- SQLite 데이터베이스를 편하게 사용하게 해주는 라이브러리이다.
+- SQLite 데이터베이스를 편하게 사용하게 해주는 라이브러리입니다.
 
 
 

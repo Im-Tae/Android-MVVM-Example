@@ -3,12 +3,11 @@ buildscript {
     ext {
         kotlin_version = "1.4.32"
         aac_version = "2.4.1"
-        rxjava_version = "3.0.4"
         lifecycle_version = "3.1.0"
         retrofit_version = "2.8.1"
-        koin_version = "3.1.5"
         room_version = "2.3.0"
         timber_version = "4.7.1"
+        okhttp_version = "4.9.0"
     }
     repositories {
         google()

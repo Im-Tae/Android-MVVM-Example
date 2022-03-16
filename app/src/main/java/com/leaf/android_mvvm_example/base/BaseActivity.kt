@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.leaf.android_mvvm_example.BR
 
-abstract class BaseActivity <B : ViewDataBinding, VM : BaseViewModel>(
+abstract class BaseActivity<B : ViewDataBinding, VM : BaseViewModel>(
     @LayoutRes private val layoutResId: Int
 ) : AppCompatActivity() {
 

@@ -4,7 +4,7 @@ import android.text.method.ScrollingMovementMethod
 import com.leaf.android_mvvm_example.R
 import com.leaf.android_mvvm_example.base.BaseActivity
 import com.leaf.android_mvvm_example.databinding.ActivityMainBinding
-import com.leaf.android_mvvm_example.ui.view.contributors.ContributorsFragment
+import com.leaf.android_mvvm_example.ui.view.contributors.ContributorFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
@@ -19,7 +19,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
             showToast("Fragment 열림").let {
                 supportFragmentManager
                     .beginTransaction()
-                    .add(android.R.id.content, ContributorsFragment())
+                    .add(android.R.id.content, ContributorFragment())
                     .addToBackStack(null)
                     .commit()
             }

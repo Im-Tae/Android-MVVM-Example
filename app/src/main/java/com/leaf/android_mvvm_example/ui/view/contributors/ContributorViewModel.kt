@@ -9,7 +9,7 @@ import com.leaf.android_mvvm_example.data.repository.ContributorRepository
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
-class ContributorsViewModel(
+class ContributorViewModel(
     private val contributorRepository: ContributorRepository
 ) : BaseViewModel() {
 
