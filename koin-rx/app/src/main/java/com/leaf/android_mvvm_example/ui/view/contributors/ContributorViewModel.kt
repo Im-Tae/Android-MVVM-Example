@@ -1,12 +1,17 @@
+/*
+ * Created by Im-Tae
+ *
+ * Copyright (c) 2022. Im-Tae.
+ * Last modified 22. 3. 16. 오후 5:11
+ */
+
 package com.leaf.android_mvvm_example.ui.view.contributors
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import com.leaf.android_mvvm_example.base.BaseViewModel
 import com.leaf.android_mvvm_example.data.domain.Contributor
 import com.leaf.android_mvvm_example.data.repository.ContributorRepository
-import kotlinx.coroutines.launch
 import timber.log.Timber
 
 class ContributorViewModel(

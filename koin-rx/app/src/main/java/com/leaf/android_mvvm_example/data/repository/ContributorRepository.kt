@@ -1,3 +1,10 @@
+/*
+ * Created by Im-Tae
+ *
+ * Copyright (c) 2022. Im-Tae.
+ * Last modified 22. 3. 16. 오후 7:42
+ */
+
 package com.leaf.android_mvvm_example.data.repository
 
 import com.leaf.android_mvvm_example.data.domain.Contributor
@@ -7,9 +14,6 @@ import io.reactivex.Flowable
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 
 class ContributorRepository(

@@ -1,8 +1,16 @@
+/*
+ * Created by Im-Tae
+ *
+ * Copyright (c) 2022. Im-Tae.
+ * Last modified 22. 3. 16. 오후 7:25
+ */
+
 package com.leaf.android_mvvm_example.data.domain
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
+import com.leaf.android_mvvm_example.data.domain.type.ContributorType
 
 @Entity(tableName = "contributor", primaryKeys = ["id"])
 data class Contributor(
@@ -22,7 +30,7 @@ data class Contributor(
     @SerializedName("repos_url") @ColumnInfo(name = "repos_url") val reposUrl : String? = null,
     @SerializedName("events_url") @ColumnInfo(name = "events_url") val eventsUrl : String? = null,
     @SerializedName("received_events_url") @ColumnInfo(name = "received_events_url") val receivedEventsUrl : String? = null,
-    @SerializedName("type") @ColumnInfo(name = "type") val type : String? = null,
+    @SerializedName("type") @ColumnInfo(name = "type") val type : ContributorType? = null,
     @SerializedName("site_admin") @ColumnInfo(name = "site_admin") val siteAdmin : Boolean? = null,
     @SerializedName("contributions") @ColumnInfo(name = "contributions") val contributions : Int? = null
 )

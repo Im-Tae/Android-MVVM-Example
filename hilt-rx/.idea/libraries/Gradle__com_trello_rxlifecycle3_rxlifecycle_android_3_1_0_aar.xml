@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.trello.rxlifecycle3:rxlifecycle-android:3.1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4244e25bdc4a935ffcff6089b62f1902/transformed/jetified-rxlifecycle-android-3.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bdaea7b847e05049c13e9b93d2c12958/transformed/jetified-rxlifecycle-android-3.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bdaea7b847e05049c13e9b93d2c12958/transformed/jetified-rxlifecycle-android-3.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bdaea7b847e05049c13e9b93d2c12958/transformed/jetified-rxlifecycle-android-3.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello.rxlifecycle3/rxlifecycle-android/3.1.0/58bbf324a2942fee2c4cec96de8aad2974331968/rxlifecycle-android-3.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello.rxlifecycle3/rxlifecycle-android/3.1.0/7a23ef5b10e082ac67b26b3a6af25435c7cbf8e/rxlifecycle-android-3.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

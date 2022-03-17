@@ -1,3 +1,10 @@
+/*
+ * Created by Im-Tae
+ *
+ * Copyright (c) 2022. Im-Tae.
+ * Last modified 22. 3. 16. 오후 7:25
+ */
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {

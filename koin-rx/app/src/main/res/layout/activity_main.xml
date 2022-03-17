@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Im-Tae
+  ~
+  ~ Copyright (c) 2022. Im-Tae.
+  ~ Last modified 22. 3. 16. 오후 5:11
+  -->
+
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

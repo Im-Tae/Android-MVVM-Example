@@ -1,6 +1,15 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+/*
+ * Created by Im-Tae
+ *
+ * Copyright (c) 2022. Im-Tae.
+ * Last modified 22. 3. 16. 오후 7:25
+ */
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
 
 android {
     compileSdkVersion 31

@@ -1,7 +1,8 @@
 /*
- * Create by Im-Tae.
+ * Created by Im-Tae
  *
- * Copyright (c) 2021. Im-Tae. All rights reserved.
+ * Copyright (c) 2022. Im-Tae.
+ * Last modified 22. 3. 16. 오후 7:25
  */
 
 package com.leaf.android_mvvm_example.data
